@@ -3,5 +3,14 @@
 /tmp
 /out-tsc
 
-#dependencies
-/node_modules
+# Dependency directories
+.gitignore
+iandeFrontEnd/iande-api/node_modules/
+jspm_packages/
+
+
+# Optional npm cache directory
+.npm
+
+# Output of 'npm pack'
+*.tgz
