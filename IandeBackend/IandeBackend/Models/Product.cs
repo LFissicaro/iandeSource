@@ -14,6 +14,7 @@ namespace IandeBackend.Models
         public int productTypeId { get; set; }
         public ProductType productType { get; set; }
         public string imagePath { get; set; }
+        public int quantity { get; set; }
         public bool deleted { get; set; }
 
     }
