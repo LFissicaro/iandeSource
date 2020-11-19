@@ -1,0 +1,48 @@
+.image{
+    width: 75%;
+    border-radius: 6px;
+    border: rgb(35, 94, 50);
+}
+
+.add-button{
+    width: 100%;
+    box-shadow: rgb(240, 247, 250) 0px 1px 0px 0px;
+    background: rgb(62, 158, 54);
+    border-radius: 6px;
+    border: 1px solid rgb(35, 94, 50);
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 17px 76px;
+    text-decoration: none;
+    text-shadow: rgb(91, 97, 120) 0px 1px 0px
+}
+
+.input-number{
+    border-top: black;
+    border-right: black;
+    border-left: black;    
+}
+
+.product{
+    margin-top: 10%;
+}
+
+.quantity{
+    font-size: 80%;
+    margin-top: 15%;
+}
+
+.product-name{
+    font-family: Montserrat;
+    font-size: 250%;
+}
+
+.description{
+    
+    font-family: Montserrat;
+}
+

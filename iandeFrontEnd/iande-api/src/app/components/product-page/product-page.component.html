@@ -1,0 +1,32 @@
+<html *ngIf="!showcase">
+<div class="p-grid p-jc-center">
+    <div class="p-col-8">
+        <hr>
+    </div>
+</div>
+
+<div class="card p-jc-center">
+    <p-dataView [value]="productTypes" filterBy="name">
+        <ng-template pTemplate="header">
+            <div class="text-center">
+                <h1>Produtos</h1>
+            </div>
+        </ng-template>
+        <ng-template #grid let-productType pTemplate="listItem">
+            <div class="p-col-12">
+                <div class="product-list-item">
+                    <img [routerLink]="['/showcase', productType.id]" src={{productType.imagePath}}
+                        alt={{productType.name}} style="width: 18%; cursor: pointer;">
+                    <div class="product-list-detail">
+                        <div class="product-name">{{productType.name}}</div>
+                        <div class="product-description">{{productType.description}}</div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>
+</div>
+
+<div class="footer"></div>
+
+</html>

@@ -1,0 +1,31 @@
+<div id="header" class="p-grid p-jc-center">
+    <div class="p-col-12 text-center">
+        <img src="../../../assets/images/nome.jpg" style="width: 18%; cursor: pointer" alt=""[routerLink]="['#']">
+    </div>
+    <div class="p-col-2"></div>
+    <div class="p-col-8">
+        <ul class="nav justify-content-center nav-menu">
+            <li class="nav-item">
+                <a class="nav-link active item" href="#">Início</a>
+            </li>
+            |
+            <li class="nav-item">
+                <a class="nav-link item" href="#/productPage">Produtos</a>
+            </li>
+            |
+            <li class="nav-item">
+                <a class="nav-link item" href="#">Contato</a>
+            </li>
+        </ul>
+    </div>    
+    <div class="p-col-2">
+        <i class="pi pi-search topButton"></i>
+        <i class="pi pi-shopping-cart topButton" (click)="shoppingCart()"></i>
+        <i class="pi pi-user topButton" (click)="createAccount()"></i>       
+    </div>
+</div>
+
+<app-shopping-cart *ngIf="cart"
+[cart]="cart"
+>
+</app-shopping-cart>

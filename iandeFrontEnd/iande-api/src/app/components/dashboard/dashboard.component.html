@@ -1,0 +1,20 @@
+<div class="p-grid p-jc-around card">
+    <div class="p-col-4">
+        <div class="box">   
+            <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+                <h1 style="font-weight:normal">Menu</h1>
+                <p-panelMenu [model] = "items"> </p-panelMenu>
+                <!-- <p-button type="button" (click)="visibleSidebar1 = false" label="Save" styleClass="p-button-success"></p-button>
+                <p-button type="button" (click)="visibleSidebar1 = false" label="Cancel" styleClass="p-button-secondary"></p-button> -->
+            </p-sidebar>
+            <p-button type="button" class="botoes" (click)="visibleSidebar1 = true" icon="pi pi-bars"></p-button>
+            
+        </div>        
+    </div>    
+    <div class="p-col-4 title">
+        <h2>Sistema de Gestão de Produtos Iandê</h2>
+    </div>
+    <div class="p-col-4">
+        Sair
+    </div>
+<div>

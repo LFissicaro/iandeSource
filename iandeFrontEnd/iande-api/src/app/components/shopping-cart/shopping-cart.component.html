@@ -1,0 +1,27 @@
+<p-sidebar id="sidebar" [(visible)]="cart" position="right" [style]="{width: '30%'}">
+    <h1>Carrinho</h1>
+    <p-dataView [value]="cartList" [rows]="5" filterBy="name" emptyMessage="Sem itens no carrinho">
+        <ng-template #grid let-product pTemplate="listItem">
+            <div class="p-col-12">
+                <div class="product-list-item">
+                    <img src={{product.imagePath}} alt={{product.name}} style="width: 30%; cursor: pointer;">
+                    <div class="product-list-detail">
+                        <div class="product-name">{{product.name}}</div>
+                        <div class="product-description">{{product.description}}</div>
+                        <input class="input-number" type="number" style="width:40%;" [min]="1"
+                            value='{{product.quantity}}'>
+                        <button pButton pRipple type="button" icon="pi pi-times"
+                            class="p-button-rounded p-button-danger p-button-text" style="margin-left: 20%;"
+                            (click)="removeProduct(product)"></button>
+                    </div>
+                    <div class="product-grid-item-bottom">
+                        <span class="product-price">R${{product.sellPrice}}</span>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>
+    <span>TOTAL: R${{total}}</span>
+    <hr>
+    <button pButton pRipple type="button" label="Finalizar Compra" class="p-button-rounded p-button-success finalize" (click)="checkout();"></button>
+</p-sidebar>

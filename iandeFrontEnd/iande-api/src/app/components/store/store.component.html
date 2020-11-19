@@ -1,0 +1,78 @@
+<div name="Top">
+    <div class="p-grid p-jc-center">  
+        <div class="p-col-8" style="margin-top:30px">
+            <h1 class="titulo">Voce sabia que "Iandê" vem do Tupi Guarani e significa "você"?</h1>
+            <h3 class="titulo2">
+                {{intro}}
+            </h3>
+        </div>
+        <div class="p-col-12 p-center images">
+            <img class="image p-shadow-12" src="../../../assets/images/branca.jpg">
+            <img class="image p-shadow-12" src="../../../assets/images/preta.jpg">
+            <img class="image p-shadow-12" src="../../../assets/images/rosa.jpg">
+        </div>
+        <div class="p-col p-center" style="margin-top:10%">
+            <button pButton class="p-button-rounded p-button-outlined" style="width:25%;margin-left: 38%;text-align: center;" (click)="getProducts()">Produtos</button>
+        </div>        
+    </div>
+</div>
+
+<div name="Body" class="p-grid">
+    <div class="preenchedor">
+        <h2 class="titulo2">Busque sempre conhecer a procedencia da argila que voce está comprando. 
+            Uma argila de boa qualidade sempre traz os benefícios que promete!</h2>
+    </div>
+    <img class="preenchedor" src="../../../assets/images/cuiaArgila.png">
+</div>
+
+<div class="p-grid p-jc-center">
+    <div class="p-col-12">
+        <h1 class="titulo">Produtos</h1>
+    </div>
+    
+    <div class="p-col-3"></div>
+
+    <div class="p-col-3">
+        <img class="produto anunciado" src="../../../assets/images/tonico.jpg">
+        <div class="anuncio">
+            TÔNICOS HIDRATANTES
+        </div>
+    </div>
+    <div class="p-col-3">
+        <img class="produto anunciado" src="../../../assets/images/sabonetes.jpg">        
+        <div class="anuncio">
+            SABONETES
+        </div>
+    </div>
+
+    <div class="p-col-3"></div>
+
+    <div class="p-col-2">
+        <img class="produto anunciado" src="../../../assets/images/vela.jpg">
+        <div class="anuncio" href="https://www.instagram.com/iandeecosustentavel/">
+            VELAS PARA MASSAGEM
+        </div>
+    </div>
+    <div class="p-col-2">
+        <img class="produto anunciado" (click)="goToProduct()" src="../../../assets/images/preta.jpg">        
+        <div class="anuncio">
+            ARGILAS PARA PELE
+        </div>
+    </div>
+    <div class="p-col-2">
+        <img class="produto anunciado" src="../../../assets/images/rosa.jpg">
+        <div class="anuncio">
+            ARGILAS PARA PELE
+        </div>
+    </div>
+</div>
+
+<div class="p-grid footer">
+    
+</div>
+
+
+<app-product 
+*ngIf="goProduct"
+[product]="product">
+</app-product>

@@ -1,0 +1,81 @@
+<!-- <div class="card">
+    <p-dataView [value]="productList" [rows]="5" filterBy="name" emptyMessage="Sem itens no carrinho">
+        <ng-template #grid let-product pTemplate="listItem">
+            <div class="p-col-12">
+                <div class="product-list-item">
+                <img src={{product.imagePath}} alt={{product.name}} style="width: 18%; cursor: pointer;">
+                <div class="product-list-detail">
+                    <div class="product-name">{{product.name}}</div>
+                    <div class="product-description">{{product.description}}</div>
+                    </div>
+                    <div class="product-grid-item-bottom">
+                        <p> {{product.quantity}} unidades </p>
+                        <span class="product-price">R${{product.sellPrice * product.quantity}}</span>
+                        <button pButton pRipple type="button" icon="pi pi-times"
+                        class="p-button-rounded p-button-danger p-button-text" style="margin-left: 20%;"
+                        (click)="(product)"></button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-dataView>
+</div> -->
+
+<div class="cartView">
+    <span style="text-align: center;">CARRINHO DE COMPRAS</span>
+    <hr>
+    <div class="header">
+        <div class="productDescription">
+            PRODUTOS
+        </div>
+        <div class="productPrice">
+            PREÇO
+        </div>
+        <div class="productQuantity">
+            QUANTIDADE
+        </div>
+        <div class="totalToPay">
+            TOTAL
+        </div>
+    </div>
+    <hr>
+    <div class="data">
+        <p-dataView [value]="productList" [rows]="5" filterBy="name" emptyMessage="Sem itens no carrinho">
+            <ng-template #grid let-product pTemplate="listItem">
+                <div class="row">
+                    <div class="product-list-item">
+                        <div class="image">
+                            <img src={{product.imagePath}} alt={{product.name}} style="width: 50%; cursor: pointer;">
+                        </div>
+                        <div class="product-list-detail">
+                            <div class="product-name">{{product.name}}</div>
+                            <div class="product-description">{{product.description}}</div>
+                        </div>
+                        <div class="price">
+                            <span class="product-price">R${{product.sellPrice}}</span>
+                        </div>
+                        <div class="quantity">
+                            <span> {{product.quantity}} </span>
+                        </div>
+                        <div class="total">
+                            <span>R${{product.sellPrice * product.quantity}}</span>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-dataView>
+        <div class="totalLine">
+            <div class="summary">
+                RESUMO DO SEU PEDIDO
+            </div>
+            <div class="totalPriceLine">
+                R${{total}}
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <p-button>FINALIZAR COMPRA</p-button>
+</div>
+
+<div class="footer"></div>

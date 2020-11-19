@@ -1,0 +1,28 @@
+<html>
+    <div class="card p-jc-center" style="margin-left: 15%; width: 70%;">
+        <p-dataView  [value]="products" [rows]="5" filterBy="name" layout="grid">
+            <ng-template pTemplate="header">
+                <div class="text-center">
+                    <h1>{{productType.name}}</h1>
+                </div>                
+            </ng-template>
+            <ng-template  #grid let-product pTemplate="gridItem">
+                <div class="p-col-12 p-md-4">
+                    <div class="product-grid-item card">                        
+                        <!-- <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span> -->
+                        <div class="product-grid-item-content">
+                            <img src={{product.imagePath}} style="cursor: pointer;"/>
+                            <div class="product-name">{{product.name}}</div>
+                            <div class="product-description">{{product.description}}</div>
+                        </div>
+                        <div class="product-grid-item-bottom">
+                            <span class="product-price">R${{product.sellPrice}}</span>
+                            <p-button icon="pi pi-plus" (click)="addProductToCart(product)"></p-button> <!--[disabled]="product.inventoryStatus === 'OUTOFSTOCK'"-->
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+
+        </p-dataView>
+    </div>
+</html>

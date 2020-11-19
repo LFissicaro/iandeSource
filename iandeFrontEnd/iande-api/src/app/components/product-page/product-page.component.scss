@@ -1,0 +1,58 @@
+h1{
+    font-family: 'Amatic_SC';
+    text-align: center;
+}
+
+span{
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 2%;
+    font-family: 'Arquitect';
+    font-size: 130%;
+    cursor: pointer;
+}
+
+.image{
+    width: 30%;    
+    cursor: pointer;
+}
+
+.card {
+    padding: 2rem;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.product-name {
+    font-family: 'Arquitect';
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.product-description {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0 0 1rem 0;
+}
+
+.product-list-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+
+    img {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        margin-right: 2rem;
+    }
+
+    .product-list-detail {
+        flex: 1 1 0;
+    }
+
+    .p-rating {
+        margin: 0 0 .5rem 0;
+    }
+}

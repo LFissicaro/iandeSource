@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+$background-color: #202020 !important;
+$font-color: #fff !important;
+
+.p-card{
+    background-color: $background-color;
+    color: $font-color;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@font-face {
+    font-family: Amatic_SC;
+    src: url('assets/fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Sons_Narrow;
+    src: url('assets/fonts/PT_Sans_Narrow/PTSansNarrow-Regular.ttf');
+}
+
+@font-face {
+    font-family: Arquitect;
+    src: url('assets/fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('assets/fonts/Montserrat/Montserrat-Light.ttf');
+}
+
+.Amatic_SC{
+    font-family: Amatic_SC;
+}
+
+.footer{
+    background-image: url('assets/images/back4.jpg');
+    height:150px;
+    width:100%;
+    margin-top: 50px;    
+    // padding-top: 10px;
+    // padding-bottom: 0px;
+    // position: absolute;
+    // bottom: 0;
+}
