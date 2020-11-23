@@ -19,6 +19,7 @@ namespace IandeBackend.Data
         public DbSet<User> Users { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<Cart_Product> Carts_Products { get; set; }
+        public DbSet<UserPassword> UserPasswords { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -44,6 +45,11 @@ namespace IandeBackend.Data
             });
 
             //define que a entidade nao possui chave primaria
+            builder.Entity<UserPassword>(entity =>
+            {
+                entity.HasNoKey();
+            });
+
             builder.Entity<Cart_Product>(entity =>
             {
                 entity.HasNoKey();

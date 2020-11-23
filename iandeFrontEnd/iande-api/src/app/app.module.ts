@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CardModule} from 'primeng/card';
-import {LoginComponent} from './components/login/login.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {FormsModule}   from '@angular/forms';
@@ -23,12 +22,11 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { SidebarModule } from 'primeng/sidebar';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
-
+import {PasswordModule} from 'primeng/password';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     StoreComponent,
     HeaderComponent,
     ProductPageComponent,
@@ -51,7 +49,8 @@ import { CreateAccountComponent } from './components/create-account/create-accou
     InputNumberModule,
     DropdownModule,
     SidebarModule,
-    InputTextModule
+    InputTextModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

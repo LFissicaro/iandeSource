@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   }
 
   createAccount() {
-    this.router.navigate(['createAccount']);
+    this.router.navigate(['#']);
   }
 
 }

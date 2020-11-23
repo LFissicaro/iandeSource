@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../resources/models/User';
 
 @Component({
   selector: 'app-create-account',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAccountComponent implements OnInit {
 
+  newUser: User;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.newUser = new User();
+  }
+
+  console() {
+    console.log(this.newUser.email)
+  }
+
+  createUserPassword(){
   }
 
 }
