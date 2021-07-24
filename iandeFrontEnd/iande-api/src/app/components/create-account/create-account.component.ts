@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../resources/models/User';
+import { AccountService } from '../../resources/services/account.service';
 
 @Component({
   selector: 'app-create-account',
@@ -9,8 +10,10 @@ import { User } from '../../resources/models/User';
 export class CreateAccountComponent implements OnInit {
 
   newUser: User;
-
-  constructor() { }
+  users: User[]=[];
+  constructor(
+    private accountService: AccountService
+  ) { }
 
   ngOnInit(): void {
     this.newUser = new User();
@@ -20,7 +23,12 @@ export class CreateAccountComponent implements OnInit {
     console.log(this.newUser.email)
   }
 
-  createUserPassword(){
+  createNewUser() {
+
+  }
+
+  getUsers() {
+    var users = this.accountService.getUsers();
   }
 
 }

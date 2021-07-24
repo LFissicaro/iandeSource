@@ -11,7 +11,7 @@
                     <div class="product-grid-item card">                        
                         <!-- <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span> -->
                         <div class="product-grid-item-content">
-                            <img src={{product.imagePath}} style="cursor: pointer;"/>
+                            <img [routerLink]="['/product', product.id]" src={{product.imagePath}} style="cursor: pointer;"/>
                             <div class="product-name">{{product.name}}</div>
                             <div class="product-description">{{product.description}}</div>
                         </div>

@@ -1,6 +1,6 @@
 <div id="header" class="p-grid p-jc-center">
     <div class="p-col-12 text-center">
-        <img src="../../../assets/images/nome.jpg" style="width: 18%; cursor: pointer" alt=""[routerLink]="['#']">
+        <img src="../../../assets/images/logoBella.png" style="width: 18%; cursor: pointer" alt=""[routerLink]="['#']">
     </div>
     <div class="p-col-2"></div>
     <div class="p-col-8">
@@ -24,6 +24,8 @@
         <i class="pi pi-user topButton" (click)="createAccount()"></i>       
     </div>
 </div>
+
+<hr>
 
 <app-shopping-cart *ngIf="cart"
 [cart]="cart"

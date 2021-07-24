@@ -11,7 +11,6 @@ namespace IandeBackend.Models
         public string userName { get; set; }
         public string email { get; set; }
         public int permission { get; set; }
-        public int userPasswordId { get; set; }
         public string cep { get; set; }
         public bool deleted { get; set; }
     }

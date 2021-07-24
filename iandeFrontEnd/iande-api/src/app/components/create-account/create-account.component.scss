@@ -1,11 +1,13 @@
 .card {
-    width: 60%;
-    margin-left: 20%;
-    text-align: center;
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 30%;
+    height: 50em;
 }
 
 .titulo {
-    font-family: 'Amatic_SC';
+    text-align: center;
+    font-family: 'Montserrat';
 }
 
 .entry {
@@ -13,5 +15,15 @@
 }
 
 .register {
+    background-color: #5f9032;
+    border-color: #5f9032;
+    color: white;
     margin-top: 5%;
+    width: 85%;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.registerComponent {
+    margin-top: 3%;
+    margin-left: 15%
 }

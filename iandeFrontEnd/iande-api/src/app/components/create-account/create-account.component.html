@@ -1,34 +1,65 @@
 <div class="card">
     <h1 class="titulo">Registro de usuário</h1>
-    <div class="p-field form">
-        <label>Nome:* </label>
-        <input [(ngModel)]="newUser.name" class="entry" type="text" pInputText>
+    <div class="p-grid registerComponent">
+        <div class="p-col-6">
+            <label>Nome:* </label>
+        </div>
+        <div class="p-col-6">    
+            <input class="entry" [(ngModel)]="newUser.name" type="text" pInputText>
+        </div>
     </div>
-    <div class="p-field form">
-        <label>Usuário:* </label>
-        <input [(ngModel)]="newUser.userName" class="entry" type="text" pInputText>
+    <div class="p-grid registerComponent">
+        <div class="p-col-6">
+            <label>Usuário:* </label>
+        </div>
+        <div class="p-col-6">    
+            <input class="entry" [(ngModel)]="newUser.userName" type="text" pInputText>
+        </div>
     </div>
-    <div class="p-field form">
-        <label>E-mail:* </label>
-        <input [(ngModel)]="newUser.email" class="entry" type="text" pInputText>
+    <div class="p-grid registerComponent">
+        <div class="p-col-6">
+            <label>E-mail:* </label>
+        </div>
+        <div class="p-col-6">    
+            <input class="entry" [(ngModel)]="newUser.email" type="text" pInputText>
+        </div>
     </div>
-    <div class="p-field form">
-        <label>Nascimento:* </label>
-        <input class="entry" type="date" pInputText>
+    <div class="p-grid registerComponent">
+        <div class="p-col-6">
+            <label>Nascimento:* </label>
+        </div>
+        <div class="p-col-6">    
+            <input class="entry" type="date" pInputText>
+        </div>
     </div>
-    <div class="p-field form">
-        <label>CEP:* </label>
-        <input class="entry" type="text" pInputText>
+    <div class="p-grid registerComponent">
+        <div class="p-col-6">
+            <label>CEP:* </label>
+        </div>
+        <div class="p-col-6">    
+            <input class="entry" type="text" pInputText>
+        </div>
     </div>
-    <div class="p-field form">
-        <label>Estado Civil: </label>
-        <input pInputText>
+    <div class="p-grid registerComponent">
+        <div class="p-col-6">
+            <label>Estado Civil: </label>
+        </div>
+        <div class="p-col-6">    
+            <input class="entry" pInputText>
+        </div>
     </div>
-    <div class="p-filed form">
-        <label>Senha: </label>
-        <input class="entry" type="password" pPassword>
+    <div class="p-grid registerComponent">
+        <div class="p-col-6">
+            <label>Senha: </label>
+        </div>
+        <div class="p-col-6">    
+            <input class="entry" type="password" pPassword>
+        </div>
     </div>
-    <div class="p-field">
-        <button class="register" (click)="console()">console</button>
+    <div class="registerComponent">
+        <button class="register" (click)="createNewUser()">Registrar-se</button>
     </div>
+</div>
+
+<div class="footer">    
 </div>

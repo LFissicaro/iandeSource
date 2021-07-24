@@ -1,19 +1,17 @@
+<h1><a>home</a> > <a>Produtos</a></h1>
 <div class="p-grid p-jc-center product">
     <div class="p-col-3">
-        <img class="image p-shadow-12" src="../../../assets/images/preta.jpg">
+        <img class="image p-shadow-12" src="{{product.imagePath}}">
     </div>
     <div class="p-col-3">
         <p class="product-name">
-            ARGILA PRETA
+            {{product.name}}
         </p>
         <p class="description">
-            R$14,99
-        </p>
-        <p class="quantity description">
-            QUANTITY
+            {{product.sellPrice}}
         </p>
         <p>            
-            <input class="input-number" type="number" style="width:15%;height:40px" [min]="1" [value]="quantity">
+            <input class="input-number" type="number" style="width:15%;height:40px" [min]="1" [value]="product.quantity">
         </p>
         <p>
             <button class="add-button description" (click)="addToCart()">Adicionar ao Carrinho</button>
@@ -33,10 +31,7 @@
             DESCRIÇÃO GERAL
             <br>
             <br>
-            HDUSAKHDSUAKHDUSIAHDUSIAHDUSAIHDSUIAH DUS
-            IAHDUSIAHDUISA
-            HDUISAHDUISHAUDISHADUISAHDUISAHDUISHADUISHAUDIS
-            HADUISHADIUSHAU
+            {{product.description}}
         </p>
     </div>
     <div class="p-col-3">

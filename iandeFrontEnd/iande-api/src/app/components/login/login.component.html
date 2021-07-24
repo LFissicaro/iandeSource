@@ -1,0 +1,12 @@
+<div #loginForm class="p-grid p-jc-center">
+    <div class="p-col-12">
+        <div class="card">
+            <h1>Login</h1>
+            <!-- <label for="username">UserName:</label> -->
+            <input class="loginComponent" type="text" pInputText  placeholder="UserName">
+            <input class="loginComponent" type="password" pPassword  placeholder="Password">
+            <a class="loginComponent" href="#/createAccount">Registre-se</a>
+            <button [disabled]="!loginForm.valid" class="loginComponent loginButton">Login</button>
+        </div>
+    </div>
+</div>

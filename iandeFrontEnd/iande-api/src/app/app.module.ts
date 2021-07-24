@@ -23,6 +23,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import {PasswordModule} from 'primeng/password';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {PasswordModule} from 'primeng/password';
     ShowcaseComponent,
     ShoppingCartComponent,
     CheckoutComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

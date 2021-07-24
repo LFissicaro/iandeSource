@@ -45,7 +45,6 @@ export class StoreComponent implements OnInit {
 
   ngOnInit(): void {
     this.product = new Product();
-    this.product.cod = 1;
     this.product.name = "Argila Preta";
     this.product.sellPrice = 14.99;
     this.getProducts();

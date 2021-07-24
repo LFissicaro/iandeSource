@@ -52,4 +52,7 @@ export class ShowcaseComponent implements OnInit {
     this.productService.addToCart(product);
   }
 
+  goToProductPage(product){
+  }
+
 }

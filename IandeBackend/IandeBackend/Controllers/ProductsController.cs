@@ -22,17 +22,18 @@ namespace IandeBackend.Controllers
         }
 
         [HttpGet]
-        [Route("GetProductsByType/{productTypeId}")]
-        public List<Product> GetProductsByType(int productTypeId)
+        [Route("GetProducts")]
+        public List<Product> GetProducts()
         {
-            return _context.Products.Where(p => p.productTypeId == productTypeId).ToList();
+            return _context.Products.ToList();
         }
 
         [HttpGet]
-        [Route("GetProducts")]
-        public List<Product> GetProducts() 
+        [Route("GetProduct/{id}")]
+        public Product GetProduct(int id)
         {
-            return _context.Products.ToList();
+            Product prod = _context.Products.Where(p => p.id == id).FirstOrDefault();
+            return prod;
         }
 
         [HttpPost]
@@ -80,6 +81,13 @@ namespace IandeBackend.Controllers
             {
                 return BadRequest(e);
             }
+        }
+
+        [HttpGet]
+        [Route("GetProductsByType/{productTypeId}")]
+        public List<Product> GetProductsByType(int productTypeId)
+        {
+            return _context.Products.Where(p => p.productTypeId == productTypeId).ToList();
         }
 
         [HttpPost]

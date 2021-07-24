@@ -1,9 +1,8 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AuthenticateService } from './authenticate.service';
 import { Observable } from 'rxjs';
-import { Product } from '../models/Product';
 import { Router } from '@angular/router';
+import { Product } from '../models/Product';
 import { AlertService } from './alert.service';
 
 @Injectable({
@@ -17,12 +16,15 @@ export class ProductService {
   constructor(
     private httpClient: HttpClient,
     private router: Router,
-    private alertService: AlertService,
-    private authenticateService: AuthenticateService
+    private alertService: AlertService
   ) { }
 
   getProducts() {
     return this.httpClient.get(this.root + "GetProducts");
+  }
+
+  getProduct(id: number) {
+    return this.httpClient.get(this.root + "GetProduct/" + id);
   }
 
   getProductsByType(id: number) {
